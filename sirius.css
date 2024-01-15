@@ -1,0 +1,206 @@
+:root {
+    color-scheme: light dark;
+    --next-img-width: 99%;
+    --textarea-width: 91.8%;
+    --color-green: rgba(124, 252, 0, 1);
+    --color-green-pale: rgba(124, 252, 0, 0.15);
+    --color-orange: rgba(255, 117, 24, 1);
+    --color-orange-pale: rgba(255, 117, 24, 0.15);
+    --color-red: rgba(255, 0, 0, 1);
+    --color-red-pale: rgba(255, 0, 0, 0.15);
+}
+@media screen and (prefers-color-scheme: light) {
+    :root {
+        --background-color: rgba(248, 248, 255, 1);
+        --bg-color-transparent: rgba(248, 248, 255, 0.81);
+        --color: rgba(74, 100, 108, 1);
+        --color-transparent: rgba(74, 100, 108, 0.75);
+    }
+}
+@media screen and (prefers-color-scheme: dark) {
+    :root {
+        --background-color: rgba(0, 45, 98, 1);
+        --bg-color-transparent: rgba(0, 45, 98, 0.87);
+        --color: rgba(204, 204, 204, 1);
+        --color-transparent: rgba(204, 204, 204, 0.75);
+    }
+}
+
+@media (max-width: 999px) {
+  :root {
+    --width: 97.2%;
+    --font-size: 2.1rem; /* equivalent to 210% */
+    --input-width: 99%;
+  }
+}
+
+@media only screen and (min-width: 1000px) and (max-width: 1400px) {
+  :root {
+    --width: 69%;
+    --font-size: 1.8rem; /* equivalent to 180% */
+    --input-width: 90%;
+  }
+}
+
+@media (min-width: 1400px) {
+  :root {
+    --width: 60%;
+    --font-size: 1.2rem; /* equivalent to 120% */
+    --input-width: 45%;
+  }
+}
+
+* { 
+    box-sizing: border-box; 
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    border-radius: 0.39rem;
+}
+
+body {
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--color);
+    font-size: var(--font-size);
+    font-family: verdana;
+}
+
+h1, h2 { margin: 0; }
+
+h3 { text-align: center; }
+
+ol {
+    margin: 1.2rem;
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+a { 
+    text-decoration: none; 
+    color: var(--color);
+}
+
+header, section, footer {
+    margin: 0 auto; 
+    padding: 0.9rem;
+    width: var(--width);
+}
+
+section { border: 0.09rem dashed var(--color); }
+
+#navbar {
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#navbar > * {
+    flex: auto;
+    padding: 0.3rem;
+    width: auto;
+    margin: 0.12rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.rack {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rack > * {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    margin: 0.3rem;
+}
+
+.pre_button {
+    font-size: small;
+    text-decoration: underline;
+}
+
+#navbar a:link, #navbar a:visited, #navbar a:focus {
+    color: var(--background-color);
+    background-color: var(--color);
+}
+
+#navbar a:hover, #navbar a:active {
+    color: var(--color);
+    background-color: var(--background-color);
+}
+
+#update_gig, #near_miss, #accident { 
+    margin: 0.9% 0;
+    padding: 1.8%; 
+}
+
+#update_gig { background-color: var(--color-green-pale); }
+#near_miss { background-color: var(--color-orange-pale); }
+#accident { background-color: var(--color-red-pale); }
+
+.userlevel0, .userlevel0 a, .safari0 a, .class_pale, .class_pale a { color: var(--color-transparent); }
+.userlevel2, .userlevel3, .userlevel2 a, .userlevel3 a, .class_orange, .class_orange a { color: var(--color-orange); }
+.class_red, .class_red a { color: var(--color-red); }
+.class_green, .class_green a { color: var(--color-green); }
+
+input, textarea, select, .button a {
+    font-size: inherit;
+    background-color: var(--background-color);
+    border: 0.075rem solid var(--color);
+    padding: 0.18rem;
+    color: var(--color);
+    margin: 0.21rem;
+}
+
+input { width: var(--input-width);}
+
+textarea{
+    width: var(--textarea-width);
+    height: 90px;
+    vertical-align: top;
+}
+
+input[type=checkbox] {
+    vertical-align: middle;
+    transform: scale(0.99);
+    width: auto;
+    border: 0.09rem solid var(--color);
+}
+
+input[type=submit], .button a, .button_svg a { 
+    width: fit-content;
+    background-color: var(--color);
+    color: var(--background-color);
+}
+
+.button, .button_svg { 
+    width: max-content;
+    margin-top: 0.9%; 
+}
+
+.button_svg svg {
+    height: 2.1rem;
+    vertical-align: middle;
+}
+
+.button_svg a:link, .button_svg a:visited, .button_svg a:focus {
+    background-color: var(--background-color);
+    fill: var(--color);
+}
+
+.button_svg a:hover, .button_svg a:active {
+    background-color: var(--color);
+    fill: var(--background-color);
+}
+
+footer { text-align: right; }
+
+footer svg {
+    width: 2.1rem;
+    height: 2.1rem;
+    fill: var(--color);
+}
