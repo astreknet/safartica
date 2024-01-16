@@ -33,7 +33,5 @@ header( 'Content-Disposition: attachment;filename=sirius_contacts-'.date('YmdHis
 
 if(isset($_SESSION['gig_report'], $_SESSION['validated']) && $_SESSION['validated']) { downloadCsv('gig_report'); }
 if(isset($_SESSION['nearmiss_report'], $_SESSION['validated']) && $_SESSION['validated']) { downloadCsv('nearmiss_report'); }
-if(isset($_SESSION['accident_report'], $_SESSION['validated']) && $_SESSION['validated']) { downloadCsv('accident_report'); }
-if(isset($_SESSION['work_nearmiss_report'], $_SESSION['validated']) && $_SESSION['validated']) { downloadCsv('work_nearmiss_report'); }
-if(isset($_SESSION['work_accident_report'], $_SESSION['validated']) && $_SESSION['validated']) { downloadCsv('work_accident_report'); }
+if(isset($_SESSION['feedback_report'], $_SESSION['validated']) && $_SESSION['validated']) { downloadCsv('feedback_report'); }
 ?>
